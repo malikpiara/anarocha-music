@@ -3,19 +3,23 @@ import profilePic from '@/public/ana.jpg';
 
 export default function Header() {
   return (
-    <div className='w-full flex flex-col'>
+    <div className='grid max-w-lg grid-cols-1 justify-items-center'>
       <Image
         src={profilePic}
         placeholder='blur'
         className='rounded-full self-center mb-10'
         alt='Ana Rocha'
-        width='200'
-        height='200'
+        width='180'
+        height='180'
       />
-      <h1 className='text-3xl font-semibold text-center'>Ana Rocha</h1>
-      <p className='text-slate-500 italic font-medium text-xl mt-1  self-center '>
-        Singer, lyricist and composer with German and Portuguese roots.
-      </p>
+      <div className='grid grid-cols-1 gap-2 text-center'>
+        <h1 className='text-3xl font-semibold text-center tracking-tighter'>
+          Ana Rocha
+        </h1>
+        <p className='text-slate-500 italic font-medium text-2xl leading-normal tracking-tight font-serif'>
+          Singer, lyricist and composer with German and Portuguese roots.
+        </p>
+      </div>
     </div>
   );
 }
