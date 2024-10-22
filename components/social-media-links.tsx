@@ -21,7 +21,7 @@ export default function SocialMediaLinks() {
     },
     {
       title: 'Apple Music',
-      url: 'https://www.facebook.com/anarochagaspar',
+      url: 'https://music.apple.com/de/artist/ana-rocha/1680946999',
     },
     {
       title: 'Spotify',

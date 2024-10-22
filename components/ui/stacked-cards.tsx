@@ -12,7 +12,7 @@ export default function CardStack() {
       url: 'https://youtu.be/warByl0LbLE',
     },
     {
-      title: 'Yearn with Diederik Wissels, Nikolas Kummert (Videoclip)',
+      title: 'Yearn with Diederik Wissels, Nicolas Kummert (Videoclip)',
       url: 'https://www.youtube.com/watch?v=57Tkb90aHTQ',
     },
   ];
