@@ -17,7 +17,7 @@ export default function SocialMediaLinks() {
     },
     {
       title: 'Facebook',
-      url: 'https://www.facebook.com/anarochagaspar',
+      url: 'https://www.facebook.com/anarochamusic',
     },
     {
       title: 'Apple Music',
