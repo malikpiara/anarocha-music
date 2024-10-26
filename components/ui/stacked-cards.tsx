@@ -15,6 +15,10 @@ export default function CardStack() {
       title: 'Yearn with Diederik Wissels, Nicolas Kummert (Videoclip)',
       url: 'https://www.youtube.com/watch?v=57Tkb90aHTQ',
     },
+    {
+      title: 'Upcoming Concerts',
+      url: 'http://anarochagaspar.com/concerts/',
+    },
   ];
 
   return (
@@ -24,7 +28,7 @@ export default function CardStack() {
           key={index}
           className='w-full cursor-pointer hover:opacity-80 hover:scale-105 transition-all rounded-xl'
         >
-          <CardContent className='p-6 px-20 hover:text-pink-400 transition-all'>
+          <CardContent className='p-6 px-20 hover:text-[#D1B0F9] transition-all'>
             <Link href={card.url} target='_blank'>
               <h2 className='text-center font-medium'>{card.title}</h2>
             </Link>

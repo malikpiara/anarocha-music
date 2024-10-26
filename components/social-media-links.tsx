@@ -10,22 +10,27 @@ export default function SocialMediaLinks() {
     {
       title: 'Instagram',
       url: 'https://www.instagram.com/anarochamusic',
+      icon: '/instagram.svg',
     },
     {
       title: 'Youtube',
       url: 'https://www.youtube.com/@anaofficialmusic',
+      icon: '/youtube.svg',
     },
     {
       title: 'Facebook',
       url: 'https://www.facebook.com/anarochamusic',
+      icon: '/facebook.svg',
     },
     {
       title: 'Apple Music',
       url: 'https://music.apple.com/de/artist/ana-rocha/1680946999',
+      icon: '/apple-music.svg',
     },
     {
       title: 'Spotify',
       url: 'https://open.spotify.com/artist/4ppTNB1xdVMcSdgVXuAILM?si=KtwkehfiSuKswG4MWSySBw',
+      icon: '/spotify.svg',
     },
   ];
 
@@ -44,10 +49,10 @@ export default function SocialMediaLinks() {
         >
           <Image
             aria-hidden
-            src='https://nextjs.org/icons/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
+            src={social.icon}
+            alt={`${social.title} icon`}
+            width={24}
+            height={24}
           />
           {social.title}
         </Link>
