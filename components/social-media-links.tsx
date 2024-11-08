@@ -9,17 +9,17 @@ export default function SocialMediaLinks() {
   const socialMedia = [
     {
       title: 'Instagram',
-      url: 'https://www.instagram.com/anarochamusic',
+      url: 'https://instagram.com/anarochamusic',
       icon: '/instagram.svg',
     },
     {
       title: 'Youtube',
-      url: 'https://www.youtube.com/@anaofficialmusic',
+      url: 'https://youtube.com/@anaofficialmusic',
       icon: '/youtube.svg',
     },
     {
       title: 'Facebook',
-      url: 'https://www.facebook.com/anarochamusic',
+      url: 'https://facebook.com/anarochamusic',
       icon: '/facebook.svg',
     },
     {
