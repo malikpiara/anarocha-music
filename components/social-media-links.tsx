@@ -1,38 +1,14 @@
+// Do not change anything in this file.
+// To change the social media links and add new links go to the folder 'content'.
+
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePostHog } from 'posthog-js/react';
+import { socialMedia } from '@/content/socialMedia';
 
 export default function SocialMediaLinks() {
   const posthog = usePostHog();
-
-  const socialMedia = [
-    {
-      title: 'Instagram',
-      url: 'https://instagram.com/anarochamusic',
-      icon: '/instagram.svg',
-    },
-    {
-      title: 'Youtube',
-      url: 'https://www.youtube.com/@anarochamusic',
-      icon: '/youtube.svg',
-    },
-    {
-      title: 'Facebook',
-      url: 'https://facebook.com/anarochamusic',
-      icon: '/facebook.svg',
-    },
-    {
-      title: 'Apple Music',
-      url: 'https://music.apple.com/de/artist/ana-rocha/1680946999',
-      icon: '/apple-music.svg',
-    },
-    {
-      title: 'Spotify',
-      url: 'https://open.spotify.com/artist/4ppTNB1xdVMcSdgVXuAILM?si=KtwkehfiSuKswG4MWSySBw',
-      icon: '/spotify.svg',
-    },
-  ];
 
   return (
     <>
