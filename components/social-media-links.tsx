@@ -14,7 +14,7 @@ export default function SocialMediaLinks() {
     },
     {
       title: 'Youtube',
-      url: 'https://youtube.com/@anarochamusic',
+      url: 'https://www.youtube.com/@anarochamusic',
       icon: '/youtube.svg',
     },
     {
