@@ -13,10 +13,10 @@ export default function Header() {
         height='180'
       />
       <div className='grid grid-cols-1 gap-2 text-center'>
-        <h1 className='text-3xl font-semibold text-center tracking-tighter'>
+        <h1 className='text-3xl font-medium text-center tracking-tighter text-[#0348B6]'>
           Ana Rocha
         </h1>
-        <p className='text-slate-500 italic font-medium text-2xl leading-normal tracking-tight font-serif'>
+        <p className='text-slate-500 font-medium text-2xl leading-normal tracking-tight'>
           Singer, lyricist and composer with German and Portuguese roots.
         </p>
       </div>

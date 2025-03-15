@@ -2,10 +2,10 @@
 // Each card has a name (title) and a URL.
 
 export const cards = [
-  {
+  /* {
     title: 'Music by Ana Rocha',
     url: 'https://open.spotify.com/artist/4ppTNB1xdVMcSdgVXuAILM?si=KtwkehfiSuKswG4MWSySBw',
-  },
+  }, */
   {
     title: 'João dos Jornais - ELAS - Ana Rocha & Rui Salgado Trio',
     url: 'https://youtu.be/warByl0LbLE',
@@ -14,10 +14,10 @@ export const cards = [
     title: 'Yearn with Diederik Wissels, Nicolas Kummert (Videoclip)',
     url: 'https://www.youtube.com/watch?v=57Tkb90aHTQ',
   },
-  {
+  /* {
     title: 'Upcoming Concerts',
     url: 'http://anarochagaspar.com/concerts/',
-  },
+  }, */
 ];
 
 /*

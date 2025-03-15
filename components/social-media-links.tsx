@@ -15,7 +15,7 @@ export default function SocialMediaLinks() {
       {socialMedia.map((social) => (
         <Link
           key={social.title}
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
+          className='flex items-center gap-2 hover:underline hover:underline-offset-4 transition-all hover:bg-slate-100 hover:text-[#0348B6] px-2 rounded-md'
           href={social.url}
           target='_blank'
           rel='noopener noreferrer'
