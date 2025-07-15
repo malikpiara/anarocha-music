@@ -7,12 +7,12 @@ export const cards = [
     url: 'https://open.spotify.com/artist/4ppTNB1xdVMcSdgVXuAILM?si=KtwkehfiSuKswG4MWSySBw',
   }, */
   {
-    title: 'João dos Jornais - ELAS - Ana Rocha & Rui Salgado Trio',
-    url: 'https://youtu.be/warByl0LbLE',
-  },
-  {
     title: 'Yearn with Diederik Wissels, Nicolas Kummert (Videoclip)',
     url: 'https://www.youtube.com/watch?v=57Tkb90aHTQ',
+  },
+  {
+    title: 'Not So Far with Diederik Wissels (Videoclip)',
+    url: 'https://youtu.be/_71CyGZiFs8',
   },
   /* {
     title: 'Upcoming Concerts',

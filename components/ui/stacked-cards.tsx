@@ -54,62 +54,6 @@ export function EventItem({ date, venue, band }: EventItemProps) {
 export default function CardStack() {
   const data = [
     {
-      id: 0,
-      date: '26/04/2025',
-      venue: 'Sala Anexa (Lisboa)',
-      band: 'Ana Rocha & Filipe Duarte',
-      url: '#',
-    },
-    {
-      id: 1,
-      date: '02/04/2025',
-      venue: 'Klick Kino (Berlin)',
-      band: 'Ana Rocha & Naoufal Montassere',
-      url: '#',
-    },
-    {
-      id: 2,
-      date: '30/04/2025',
-      venue: 'Trifolion Echternach (Luxemburg)',
-      band: 'Boris Schmidt Band',
-      url: '#',
-    },
-    {
-      id: 3,
-      date: '10/05/2025',
-      venue: 'Jazz Station (Brussels)',
-      band: 'Boris Schmidt Band',
-      url: '#',
-    },
-    {
-      id: 4,
-      date: '08/06/2025',
-      venue: 'Le Baixu (Brussels)',
-      band: 'Boris Schmidt Band',
-      url: '#',
-    },
-    {
-      id: 5,
-      date: '14/06/2025',
-      venue: 'Bouillon Blanc (Bouillon, BE)',
-      band: 'Ana & the Duorkestra',
-      url: '#',
-    },
-    {
-      id: 6,
-      date: '15/06/2025',
-      venue: 'Magie du Pommier (Manhay)',
-      band: 'Ana & the Duorkestra',
-      url: '#',
-    },
-    {
-      id: 7,
-      date: '22/06/2025',
-      venue: 'Abbey Neumünster (LUX)',
-      band: 'Boris Schmidt Band',
-      url: '#',
-    },
-    {
       id: 8,
       date: '01/10/2025',
       venue: 'Brussels',
