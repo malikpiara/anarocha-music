@@ -11,7 +11,7 @@ export const cards = [
     url: 'https://www.youtube.com/watch?v=57Tkb90aHTQ',
   },
   {
-    title: 'Not So Far with Diederik Wissels (Videoclip)',
+    title: 'Not So Far with Diederik Wissels, Nicolas Kummert (Videoclip)',
     url: 'https://youtu.be/_71CyGZiFs8',
   },
   /* {
