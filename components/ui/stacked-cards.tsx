@@ -55,17 +55,17 @@ export default function CardStack() {
   const data = [
     {
       id: 8,
-      date: '01/10/2025',
-      venue: 'Brussels',
-      band: 'ELAS',
-      url: '#',
+      date: '27/09/2025',
+      venue: 'Relais Jazz - Festival "Feminin Singulier" (Tourinnes-la-Grosse)',
+      band: 'Ana Rocha',
+      url: 'https://relaisjazz.be/',
     },
     {
       id: 9,
-      date: '01/11/2025',
-      venue: 'Belgian Tour',
-      band: 'Ana Rocha, Diederik Wissels, Nicolas Kummert',
-      url: '#',
+      date: '27/09/2025',
+      venue: "Diln'foss (Rixensart)",
+      band: 'Boris Schmidt Band',
+      url: 'https://www.facebook.com/dinlfoss?locale=fr_FR',
     },
     {
       id: 10,
