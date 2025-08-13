@@ -22,7 +22,7 @@ type EventItemProps = {
   date: string;
   venue: string;
   band: string;
-  url?: string;
+  url: string;
 };
 
 function formatDate(dateStr: string) {
@@ -32,12 +32,12 @@ function formatDate(dateStr: string) {
   return { monthAbbr, day };
 }
 
-export function EventItem({ date, venue, band }: EventItemProps) {
+export function EventItem({ date, venue, band, url }: EventItemProps) {
   const { monthAbbr, day } = formatDate(date);
   return (
     <Link
       className='flex items-center border rounded-lg overflow-hidden w-full hover:opacity-60 transition-all'
-      href={'#'}
+      href={url}
     >
       <div className='bg-gray-50 p-4 text-center rounded-lg m-2'>
         <div className='text-sm font-medium text-[#0348B6]'>{monthAbbr}</div>
@@ -54,48 +54,99 @@ export function EventItem({ date, venue, band }: EventItemProps) {
 export default function CardStack() {
   const data = [
     {
-      id: 8,
+      id: 1,
       date: '27/09/2025',
       venue: 'Relais Jazz - Festival "Feminin Singulier" (Tourinnes-la-Grosse)',
-      band: 'Ana Rocha',
-      url: 'https://relaisjazz.be/',
+      band: 'Ana Rocha (Solo)',
+      url: 'https://relaisjazz.be',
     },
     {
-      id: 9,
+      id: 2,
       date: '27/09/2025',
       venue: "Diln'foss (Rixensart)",
       band: 'Boris Schmidt Band',
       url: 'https://www.facebook.com/dinlfoss?locale=fr_FR',
     },
     {
+      id: 4,
+      date: '30/09/2025',
+      venue: 'Maison de la Creation (Bruxelles)',
+      band: 'ELAS with Rui Salgado Trio',
+      url: 'https://www.maisondelacreation.org/fr/evenements',
+    },
+    {
+      id: 5,
+      date: '11/10/2025',
+      venue: 'Jazz im Parkcafé (Berlin)',
+      band: 'Ana Rocha with Stefan Grütter, Tino Derado...',
+      url: 'https://jazz-im-park-cafe.jimdosite.com',
+    },
+    {
+      id: 6,
+      date: '06/11/2025',
+      venue:
+        "Tournée des Lundis D'Hortense: Café Trotinette / Triangel (Saint-Vith)",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://www.triangel.com/veranstaltungen/',
+    },
+    {
+      id: 7,
+      date: '07/11/2025',
+      venue: "Tournée des Lundis D'Hortense: Espace Senghor (Bruxelles)",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://www.senghor.be/project/wissels-rocha-kummert/',
+    },
+    {
+      id: 8,
+      date: '08/11/2025',
+      venue: "Tournée des Lundis D'Hortense: Jünglingshaus (Eupen)",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://www.kultkom.be/veranstaltungen/jazz-im-foyer-_-wissels-rocha-kummert/',
+    },
+    {
+      id: 9,
+      date: '09/11/2025',
+      venue: "Tournée des Lundis D'Hortense: Relais Jazz (Tourinnes-la-Grosse)",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://relaisjazz.be/',
+    },
+    {
       id: 10,
-      date: '05/11/2025',
-      venue: 'Le Rideau Rouge (Lasne, BE)',
-      band: 'Diederik Wissels, Ana Rocha & Nicolas Kummert',
-      url: '#',
+      date: '19/11/2025',
+      venue: "Tournée des Lundis D'Hortense: Rideau Rouge (Lasne))",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://www.lerideaurouge.be/agenda',
     },
     {
       id: 11,
-      date: '09/11/2025',
-      venue: 'Relais Jazz (Tourinnes-la-Grosse, BE)',
-      band: 'Diederik Wissels, Ana Rocha & Nicolas Kummert',
-      url: '#',
+      date: '20/11/2025',
+      venue: "Tournée des Lundis D'Hortense: Arsonic (Mons)",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://surmars.be/agenda/2025-11/musique/wissels-rocha-kummert',
     },
     {
       id: 12,
       date: '21/11/2025',
-      venue: 'Jazz9 (Mazy, BE)',
-      band: 'Diederik Wissels, Ana Rocha & Nicolas Kummert',
-      url: '#',
+      venue: "Tournée des Lundis D'Hortense: Jazz9 (Mazy)",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://jazz9-mazy.org/archives/',
     },
     {
       id: 13,
       date: '22/11/2025',
-      venue: 'Centre Culturel Mouscron (Mouscron, BE)',
-      band: 'Diederik Wissels, Ana Rocha & Nicolas Kummert',
-      url: '#',
+      venue: "Tournée des Lundis D'Hortense: Centre Culturel de Mouscron",
+      band: 'Diederik Wissels, Ana Rocha, Nicolas Kummert',
+      url: 'https://www.centrecultureldemouscron.be/project/wissels-rocha-kummert-25-26/',
+    },
+    {
+      id: 14,
+      date: '30/01/2026',
+      venue: 'Art Base (Bruxelles)',
+      band: 'ELAS with Rui Salgado Trio',
+      url: 'https://www.art-base.be/index.php?option=com_eventlist&view=categoryevents&id=1&Itemid=2',
     },
   ];
+
   return (
     <div className='container mx-auto p-4 space-y-4'>
       <div className='max-sm:hidden relative'>
@@ -173,7 +224,7 @@ export default function CardStack() {
                     date={event.date}
                     venue={event.venue}
                     band={event.band}
-                    url={event.url || '#'}
+                    url={event.url}
                   />
                 ))}
               </div>
