@@ -643,19 +643,7 @@ export function ConcertsAdmin({ concerts }: { concerts: Concert[] }) {
       {/* Upcoming grouped by month */}
       {upcomingGroups.map((group) => (
         <div key={group.key} style={{ marginBottom: 24 }}>
-          <div
-            style={{
-              fontSize: 12,
-              color: P.muted,
-              fontWeight: 600,
-              textTransform: 'uppercase',
-              letterSpacing: '0.1em',
-              marginBottom: 8,
-              paddingLeft: 4,
-            }}
-          >
-            {group.label}
-          </div>
+          <div style={monthLabelStyle}>{group.label}</div>
           <div
             style={{
               background: P.surface,
@@ -727,19 +715,7 @@ export function ConcertsAdmin({ concerts }: { concerts: Concert[] }) {
             <div style={{ opacity: 0.5 }}>
               {pastGroups.map((group) => (
                 <div key={group.key} style={{ marginBottom: 20 }}>
-                  <div
-                    style={{
-                      fontSize: 12,
-                      color: P.muted,
-                      fontWeight: 600,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.1em',
-                      marginBottom: 8,
-                      paddingLeft: 4,
-                    }}
-                  >
-                    {group.label}
-                  </div>
+                  <div style={monthLabelStyle}>{group.label}</div>
                   <div
                     style={{
                       background: P.surface,
