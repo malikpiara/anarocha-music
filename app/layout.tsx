@@ -1,17 +1,20 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Cormorant_Garamond, Nunito_Sans } from 'next/font/google';
 import './globals.css';
 import { CSPostHogProvider } from './providers';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-heading',
+  display: 'swap',
 });
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+
+const nunito = Nunito_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '600'],
+  variable: '--font-sans',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -29,7 +32,7 @@ export default function RootLayout({
     <html lang='en'>
       <CSPostHogProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${cormorant.variable} ${nunito.variable} font-sans antialiased`}
         >
           {children}
         </body>
