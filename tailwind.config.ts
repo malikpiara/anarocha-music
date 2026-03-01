@@ -9,7 +9,12 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			heading: ['var(--font-heading)', 'Georgia', 'serif'],
+  			sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+  		},
   		colors: {
+  			lavender: '#D1B0F9',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

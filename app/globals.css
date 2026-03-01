@@ -2,22 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Easing curves (animations.dev best practices) ───────── */
+:root {
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-@keyframes animateIn {
+/* ── Page entrance — fade + subtle slide ─────────────────── */
+@keyframes fadeSlideIn {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .animate-in {
-  animation: animateIn 0.6s ease 0.15s both;
+  animation: fadeSlideIn 500ms var(--ease-out-quint) both;
+  animation-delay: 80ms;
 }
+
+/* ── Staggered children entrance ─────────────────────────── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeSlideUp 400ms var(--ease-out-quint) both;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 160ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 220ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 280ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 340ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 400ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 460ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 520ms; }
 
 @layer utilities {
   .text-balance {
@@ -26,63 +57,38 @@ body {
 }
 
 ::selection {
-  background-color: #0348b6;
-  color: white;
+  background-color: #D1B0F9;
+  color: #0c0a10;
 }
 
+/* ── shadcn dark theme variables ─────────────────────────── */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --background: 264 24% 4%;
+    --foreground: 0 0% 95%;
+    --card: 264 18% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 264 18% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 268 86% 83%;
+    --primary-foreground: 264 24% 4%;
+    --secondary: 264 12% 14%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 264 10% 18%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 264 12% 16%;
+    --accent-foreground: 0 0% 95%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
+    --border: 260 7% 20%;
+    --input: 260 7% 20%;
+    --ring: 268 86% 83%;
+    --chart-1: 268 86% 83%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-  }
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
   }
 }
 
@@ -95,11 +101,14 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+/* ── Accessibility: reduced motion ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none;
+    opacity: 1;
   }
-  body {
-    @apply bg-background text-foreground;
+  .stagger-children > * {
+    animation: none;
+    opacity: 1;
   }
 }

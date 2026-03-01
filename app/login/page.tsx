@@ -1,0 +1,19 @@
+import { LoginForm } from './login-form';
+
+export default function LoginPage() {
+  return (
+    <div className='flex min-h-screen items-center justify-center p-4'>
+      <div className='w-full max-w-sm space-y-6'>
+        <div className='text-center space-y-2'>
+          <h1 className='text-2xl font-heading font-semibold tracking-tighter text-lavender'>
+            Admin Login
+          </h1>
+          <p className='text-sm text-muted-foreground'>
+            Enter your email to receive a magic link
+          </p>
+        </div>
+        <LoginForm />
+      </div>
+    </div>
+  );
+}
