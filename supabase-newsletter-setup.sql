@@ -13,10 +13,11 @@ create table public.newsletter_subscribers (
 
 alter table public.newsletter_subscribers enable row level security;
 
--- Public visitors may subscribe, but never read, update, or delete.
+-- Anyone may subscribe — logged out (anon) or logged in (authenticated) —
+-- but never read, update, or delete through this policy.
 create policy "Anyone can subscribe"
   on public.newsletter_subscribers
-  for insert to anon with check (true);
+  for insert to anon, authenticated with check (true);
 
 -- Admins (logged in via /login) can view and remove subscribers.
 create policy "Authenticated users can read newsletter_subscribers"
