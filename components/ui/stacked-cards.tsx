@@ -17,6 +17,8 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer';
 
+import NewsletterForm from '@/components/newsletter-form';
+
 /* ── Shared card classes ──────────────────────────────────── */
 const cardClasses =
   'rounded-xl cursor-pointer bg-[rgba(209,176,249,0.03)] border border-[rgba(209,176,249,0.10)] hover:bg-[rgba(209,176,249,0.07)] hover:border-[rgba(209,176,249,0.25)]';
@@ -304,6 +306,34 @@ export default function CardStack({ concerts, linkCards }: CardStackProps) {
             </div>
           </DrawerContent>
         </Drawer>
+      </div>
+
+      {/* ── Newsletter — FULL WIDTH inline form ───────────── */}
+      <div className='sm:col-span-2'>
+        <div
+          className='w-full rounded-xl bg-[rgba(209,176,249,0.03)] border border-[rgba(209,176,249,0.10)]'
+          style={{ padding: '28px 32px 32px' }}
+        >
+          <div
+            style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.1em', color: 'rgba(237,232,244,0.3)' }}
+            className='uppercase tracking-wider mb-2'
+          >
+            Newsletter
+          </div>
+          <div
+            className='font-heading text-white/80 mb-2'
+            style={{ fontSize: 22 }}
+          >
+            New songs, concerts, and news from Ana
+          </div>
+          <p
+            className='mb-6'
+            style={{ fontSize: 14, color: 'rgba(237,232,244,0.45)' }}
+          >
+            A short email a few times a year. Unsubscribe anytime.
+          </p>
+          <NewsletterForm />
+        </div>
       </div>
     </div>
   );

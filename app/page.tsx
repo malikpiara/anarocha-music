@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SocialMediaLinksText from '@/components/social-media-links-text';
 import Header from '@/components/ui/header';
 import CardStack from '@/components/ui/stacked-cards';
@@ -18,8 +19,31 @@ export default async function Home() {
         <Header />
         <CardStack concerts={concerts} linkCards={linkCards} />
       </main>
-      <footer className='mt-auto pt-20 pb-10 animate-in' style={{ animationDelay: '500ms' }}>
+      <footer
+        className='mt-auto pt-20 pb-10 animate-in flex flex-col items-center gap-5'
+        style={{ animationDelay: '500ms' }}
+      >
         <SocialMediaLinksText />
+        <div className='flex items-center gap-4 text-[13px] font-light'>
+          <Link
+            href='/impressum'
+            className='text-[rgba(237,232,244,0.25)] hover:text-lavender transition-colors'
+          >
+            Impressum
+          </Link>
+          <span
+            aria-hidden
+            style={{ color: 'rgba(237,232,244,0.15)' }}
+          >
+            ·
+          </span>
+          <Link
+            href='/datenschutz'
+            className='text-[rgba(237,232,244,0.25)] hover:text-lavender transition-colors'
+          >
+            Datenschutz
+          </Link>
+        </div>
       </footer>
     </div>
   );

@@ -27,6 +27,11 @@ export const socialMedia = [
     url: 'https://open.spotify.com/artist/4ppTNB1xdVMcSdgVXuAILM?si=KtwkehfiSuKswG4MWSySBw',
     icon: '/spotify.svg',
   },
+  {
+    title: 'WhatsApp',
+    url: 'https://whatsapp.com/channel/0029Vb8FP1s4Crfps3RaqF37',
+    icon: '/whatsapp.svg',
+  },
 ];
 
 /*

@@ -92,3 +92,17 @@ export async function deleteLinkCard(id: string): Promise<ActionResult> {
   revalidatePath('/');
   return { success: true };
 }
+
+// ---- NEWSLETTER ----
+
+export async function deleteSubscriber(id: string): Promise<ActionResult> {
+  const supabase = createClient();
+  const { error } = await supabase
+    .from('newsletter_subscribers')
+    .delete()
+    .eq('id', id);
+
+  if (error) return { success: false, error: error.message };
+  revalidatePath('/admin');
+  return { success: true };
+}
